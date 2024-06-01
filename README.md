@@ -52,3 +52,11 @@ Chegamos na parte de desenvolvimento do nosso projeto de Coleta de Lixo, para de
 ## Análise
 
 ## Conclusão
+Para concluir, o desenvolvimento deste sistema de gerenciamento para coleta seletiva representa um passo importante na direção da sustentabilidade ambiental e da gestão eficiente de resíduos. Através da priorização da coleta seletiva e do uso de tecnologia para otimizar processos, podemos enfrentar os desafios relacionados à falta de práticas sustentáveis de gerenciamento de resíduos.
+
+Com a implementação deste sistema, esperamos facilitar a gestão de dados relacionados à coleta seletiva, proporcionar às autoridades uma ferramenta para monitorar e otimizar as rotas de coleta, e envolver os cidadãos através do acesso transparente a informações sobre coleta e reciclagem.
+
+Em última análise, a conscientização e a ação coletiva são fundamentais para superar os desafios ambientais que enfrentamos. Este sistema pode servir como uma ferramenta valiosa para promover a sustentabilidade e a responsabilidade ambiental em nossa comunidade.
+
+Com o empenho e colaboração de todos os envolvidos, acreditamos que podemos fazer uma diferença positiva no manejo de resíduos e contribuir para um futuro mais limpo e saudável para as gerações futuras. Juntos, podemos tornar a coleta seletiva uma prática comum e eficaz em prol do meio ambiente e da qualidade de vida de todos.
+
