@@ -1,9 +1,10 @@
-CREATE DATABASE collect_residue;
-USE collect_residue;
+CREATE DATABASE selective_collect;
+USE selective_collect;
+DROP DATABASE selective_collect;
 
 -- Entidades
 CREATE TABLE resident (
-	id_resident integer primary key,
+	id_resident  integer auto_increment primary key,
     name_resident varchar(255),
     address varchar(100),
     password char(8),
@@ -49,6 +50,8 @@ CREATE TABLE residue (
     category varchar(100),
     checks_discard varchar(50)
 );
+
+INSERT INTO residue (
 
 CREATE TABLE driver (
 	id_driver integer primary key,
