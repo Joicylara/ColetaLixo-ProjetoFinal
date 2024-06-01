@@ -1,5 +1,5 @@
-CREATE DATABASE collect_waste;
-USE collect_waste;
+CREATE DATABASE collect_residue;
+USE collect_residue;
 
 -- Entidades
 CREATE TABLE resident (

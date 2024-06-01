@@ -39,6 +39,15 @@ Diante desse desafio, foi desenvolvido o sistema de gerenciamento para coleta se
 ## Diagramação de entidade e relacionamento
 
 ## Desenvolvimento
+  ### Acompanhe o processo de criação de uma banco de dados em MySQL:
+Chegamos na parte de desenvolvimento do nosso projeto de Coleta de Lixo, para desenvolver esse projeto foi utilizado o MySQL, que em breve resumo, nada mais é do que um banco de dados relacional, isso significa que ele armazena e organiza as informações em tabelas.
+  * ### create database collect_residue;
+  - Primeiro o "create database" e em seguida passamos o nome que desejamos a tabela, no caso, "collect_residue", e pronto, você já tem um banco de dados criado com MySQL. Aagora precisamos criar as tabelas e inserir informações no banco.
+  ### Agora vamos para nosso próximo passo, criar as tabelas:
+  - ### create table;
+  * Aqui vamos crair a tabela com o "create table" e em seguida, o nome da tabela. Devemos agora atribuir alguns valores a essa tabela, como seu id primeiramente, depois as informações que ele deve ter, como estamos criando um banco de dados para coleta de lixo, acompanhe alguns dos dados que inserimos nas tabelas "vehicle" e "route" que é mostrado na imagem abaixo:
+   ![Captura de tela 2024-06-01 130432](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/assets/108181021/50828efa-07b2-47e7-8303-42d9596fdccb)
+  * Pode observar alguns valores como "plate", que seria a placa do veiculo, da tabela veiculo, e "name_route", que seria o nome da rota. Resumindo, são as caracteristicas das nossas entidades(tabelas). 
 
 ## Análise
 
