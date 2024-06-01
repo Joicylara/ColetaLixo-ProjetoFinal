@@ -2,12 +2,12 @@
 
 ## 📋 Sumário
 1. [Introdução](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/tree/master?tab=readme-ov-file#-introdu%C3%A7%C3%A3o)
-2. [Problematização](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/new/master?filename=README.md#problematiza%C3%A7%C3%A3o)
-3. [Diagramação conceitual](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/new/master?filename=README.md#diagrama%C3%A7%C3%A3o-conceitual)
-4. [Diagramação de entidade e relacionamento](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/new/master?filename=README.md#diagrama%C3%A7%C3%A3o-de-entidade-e-relacionamento)
-5. [Desenvolvimento](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/new/master?filename=README.md#desenvolvimento)
-6. [Análise](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/new/master?filename=README.md#an%C3%A1lise)
-7. [Conclusão](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/new/master?filename=README.md#conclus%C3%A3o)
+2. [Problematização](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/tree/master?tab=readme-ov-file#-problematiza%C3%A7%C3%A3o)
+3. [Diagramação conceitual](https://github.com/Joicylara/ColetaLixo-ProjetoFinal?tab=readme-ov-file#diagrama%C3%A7%C3%A3o-conceitual)
+4. [Diagramação de entidade e relacionamento](https://github.com/Joicylara/ColetaLixo-ProjetoFinal?tab=readme-ov-file#diagrama%C3%A7%C3%A3o-de-entidade-e-relacionamento)
+5. [Desenvolvimento](https://github.com/Joicylara/ColetaLixo-ProjetoFinal?tab=readme-ov-file#desenvolvimento)
+6. [Análise](https://github.com/Joicylara/ColetaLixo-ProjetoFinal?tab=readme-ov-file#an%C3%A1lise)
+7. [Conclusão](https://github.com/Joicylara/ColetaLixo-ProjetoFinal?tab=readme-ov-file#conclus%C3%A3o)
 
 
 ## 📝 Introdução
