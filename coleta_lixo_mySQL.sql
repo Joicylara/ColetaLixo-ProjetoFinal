@@ -1,6 +1,6 @@
 CREATE DATABASE selective_collect;
 USE selective_collect;
-DROP DATABASE selective_collect;
+
 
 -- Entidades
 CREATE TABLE resident (
@@ -43,7 +43,7 @@ CREATE TABLE route (
     status bool,
     date date not null,
     vehicle_id integer,
-    foreign key (vehicle_id) references vehicle (id_vehicle)
+    foreign key (vehicle_id) references vehicle (id_vehicle) on update cascade on delete cascade
 );
 INSERT INTO route  (name_route,start_time,end_time,status,date,vehicle_id )
 VALUES 
@@ -62,9 +62,9 @@ CREATE TABLE collect (
     check_collect varchar(50),
     resident_id integer,
 	route_id integer,
-    cashback decimal,
-    foreign key (resident_id) references resident (id_resident),
-    foreign key (route_id) references route (id_route)
+    cashback decimal (10, 3),
+    foreign key (resident_id) references resident (id_resident) on update cascade on delete cascade,
+    foreign key (route_id) references route (id_route) on update cascade on delete cascade
 );
 INSERT INTO collect  (date_collect,hour_collect, location,check_collect,resident_id,route_id,cashback )
 VALUES 
@@ -92,7 +92,7 @@ VALUES
 ("vidro", "reciclável", " não verificado"),
 ("madeira", "reciclável", "categoria inválida");
 
-select * from residue;
+
 
 CREATE TABLE driver (
 	id_driver integer auto_increment  primary key,
@@ -111,8 +111,8 @@ CREATE TABLE denounce (
     status_denounce varchar(50),
     resident_id integer,
     collect_id integer,
-    foreign key (resident_id) references resident (id_resident),
-    foreign key (collect_id) references collect (id_collect),
+    foreign key (resident_id) references resident (id_resident) on update cascade on delete cascade,
+    foreign key (collect_id) references collect (id_collect) on update cascade on delete cascade,
     created_at timestamp default (now())
 );
 
@@ -123,8 +123,8 @@ CREATE TABLE resident_route(
 	id_resident_route integer auto_increment  primary key,
 	resident_id integer,
 	route_id integer,
-	foreign key (resident_id) references resident (id_resident),
-	foreign key (route_id) references route (id_route)
+	foreign key (resident_id) references resident (id_resident) on update cascade on delete cascade,
+	foreign key (route_id) references route (id_route) on update cascade on delete cascade
 
 );
 
@@ -132,14 +132,20 @@ CREATE TABLE collect_residue(
 	id_collect_residue integer auto_increment  primary key,
     collect_id integer,
     residue_id integer,
-	foreign key (collect_id) references collect (id_collect),
-    foreign key (residue_id) references residue (id_residue)
+	foreign key (collect_id) references collect (id_collect) on update cascade on delete cascade,
+    foreign key (residue_id) references residue (id_residue) on update cascade on delete cascade
 );
 
 CREATE TABLE driver_vehicle(
 	id_driver_vehicle integer auto_increment  primary key,
     driver_id integer,
     vehicle_id integer,
-    foreign key (driver_id) references  driver (id_driver),
-    foreign key (vehicle_id) references vehicle (id_vehicle)
+    foreign key (driver_id) references  driver (id_driver) on update cascade on delete cascade,
+    foreign key (vehicle_id) references vehicle (id_vehicle) on update cascade on delete cascade
 );
+
+SELECT * FROM vehicle;
+SELECT * FROM residue;
+SELECT * FROM resident;
+SELECT * FROM route;
+SELECT * FROM collect;
