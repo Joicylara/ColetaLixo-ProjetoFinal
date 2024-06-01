@@ -10,7 +10,15 @@ CREATE TABLE resident (
     password char(8),
     phone char(11),
     cpf char(11) not null
+    
 );
+INSERT INTO resident(name_resident, address, password, phone, cpf)
+VALUES("Ana Maria da Silva", "Bairro Santa Laura, rua Antonio, C 23, Q12", "abacaxi#", "65998769543", "12345678909"),
+("Rosamaria da Souza", "Bairro Palmeiras, rua Ypê, C 09, Q72", "av345678", "71458769755", "98745678967"),
+("Roberta", "Bairro Imperial, rua Porfirío, C 87, Q34", "#cajusim", "76543290863", "67543218907"),
+("Silva Nogueira", "Bairro Santa Laura, rua Antonio, C 23, Q12", "abacaxi#", "65998769543", "12345678909"),
+("Fernada Lima", "Bairro Três café, rua cenoura, C 12, Q51", "cenoura#", "67988869543", "09834567128");
+
 
 CREATE TABLE vehicle (
 	id_vehicle integer auto_increment  primary key,
@@ -18,6 +26,14 @@ CREATE TABLE vehicle (
     capacity_waste decimal (10,2) not null,
     created_at timestamp default (now())
 );
+INSERT INTO  vehicle  (plate, capacity_waste) 
+VALUES 
+("RXW2670", 20.23),  
+("YZW1773", 25.15),
+("SXW4088", 15.20),
+("SAW4077", 23.05),
+("FKL2660", 10.12); 
+
 
 CREATE TABLE route (
 	id_route integer auto_increment  primary key,
@@ -29,7 +45,15 @@ CREATE TABLE route (
     vehicle_id integer,
     foreign key (vehicle_id) references vehicle (id_vehicle)
 );
+INSERT INTO route  (name_route,start_time,end_time,status,date,vehicle_id )
+VALUES 
+("Rota 1036", '09:59:58', '19:00:00', true, '2023-05-11',1),
+("Rota 1037", '05:11:56', '12:11:24', false, '2023-09-21',3),
+("Rota 1038", '13:59:58', '22:00:00', true, '2023-10-13',5),
+("Rota 1039", '09:00:00', '17:10:05', false, '2023-11-23',4),
+("Rota 1040", '09:00:45', '19:00:23', true, '2024-01-05',2);
 
+-- definir as casas decimais do cashback
 CREATE TABLE collect (
 	id_collect integer auto_increment  primary key,
     date_collect date not null,
@@ -42,6 +66,16 @@ CREATE TABLE collect (
     foreign key (resident_id) references resident (id_resident),
     foreign key (route_id) references route (id_route)
 );
+INSERT INTO collect  (date_collect,hour_collect, location,check_collect,resident_id,route_id,cashback )
+VALUES 
+('2023-05-11', '10:33:59', " Rua Jardim das Goiabeiras, Parque São Lucas, São Paulo", "verificado",1,1, 0.02),
+('2023-09-21', '11:35:06', " Rua Jardim das Oliveiras, São Pedro, Bahia", "não verificado",2,2, 0.00),
+('2023-10-13', '07:40:41', " Rua Goias, Avenida Lucas, Minas Gerais", "verificado",3,3, 0.04),
+('2023-11-23', '18:09:45', " Rua Terra Nova, Parque São Rafael, Mato Grosso", " não verificado",4,4, 0.00),
+('2024-01-05', '05:33:54', " Rua Belém , Avenida Cantareira, Santa Catarina", "coleta incorreta ",5,5, 0.00);
+
+select * from collect;
+
 
 CREATE TABLE residue (
 	id_residue integer auto_increment  primary key,
