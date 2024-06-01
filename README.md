@@ -1,7 +1,7 @@
 # ♻ Sistema de Gerenciamento para coleta seletiva
 
 ## 📋 Sumário
-1. [Introdução](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/new/master?filename=README.md#introdu%C3%A7%C3%A3o)
+1. [Introdução](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/tree/master?tab=readme-ov-file#-introdu%C3%A7%C3%A3o)
 2. [Problematização](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/new/master?filename=README.md#problematiza%C3%A7%C3%A3o)
 3. [Diagramação conceitual](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/new/master?filename=README.md#diagrama%C3%A7%C3%A3o-conceitual)
 4. [Diagramação de entidade e relacionamento](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/new/master?filename=README.md#diagrama%C3%A7%C3%A3o-de-entidade-e-relacionamento)
