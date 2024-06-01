@@ -50,7 +50,15 @@ CREATE TABLE residue (
     checks_discard varchar(50)
 );
 
-INSERT INTO residue (
+INSERT INTO residue (type_residue, category, checks_discard)
+VALUES 
+("papel e papelão", "reciclável", "verificado"),
+("eletrônico", "perigoso", " não verificado"),
+("folha", "compostável", "verificado"),
+("vidro", "reciclável", " não verificado"),
+("madeira", "reciclável", "categoria inválida");
+
+select * from residue;
 
 CREATE TABLE driver (
 	id_driver integer auto_increment  primary key,
@@ -81,7 +89,6 @@ CREATE TABLE resident_route(
 	id_resident_route integer auto_increment  primary key,
 	resident_id integer,
 	route_id integer,
-
 	foreign key (resident_id) references resident (id_resident),
 	foreign key (route_id) references route (id_route)
 
@@ -91,7 +98,6 @@ CREATE TABLE collect_residue(
 	id_collect_residue integer auto_increment  primary key,
     collect_id integer,
     residue_id integer,
-    
 	foreign key (collect_id) references collect (id_collect),
     foreign key (residue_id) references residue (id_residue)
 );
@@ -100,7 +106,6 @@ CREATE TABLE driver_vehicle(
 	id_driver_vehicle integer auto_increment  primary key,
     driver_id integer,
     vehicle_id integer,
-    
     foreign key (driver_id) references  driver (id_driver),
     foreign key (vehicle_id) references vehicle (id_vehicle)
 );
