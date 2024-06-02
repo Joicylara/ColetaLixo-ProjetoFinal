@@ -149,3 +149,16 @@ SELECT * FROM residue;
 SELECT * FROM resident;
 SELECT * FROM route;
 SELECT * FROM collect;
+
+SELECT 
+    resident.name_resident AS 'Morador(a)',
+    SUM(collect.cashback) AS 'Total de Cashback(Porcentagem)'
+FROM 
+    resident
+JOIN 
+    collect ON resident.id_resident = collect.resident_id
+GROUP BY 
+    resident.name_resident
+ORDER BY 
+    SUM(collect.cashback) 
+DESC;
