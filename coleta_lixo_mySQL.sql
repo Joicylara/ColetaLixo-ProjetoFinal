@@ -162,3 +162,22 @@ GROUP BY
 ORDER BY 
     SUM(collect.cashback) 
 DESC;
+
+SELECT
+    c.id_collect,
+    c.date_collect,
+    c.hour_collect,
+    c.location,
+    c.check_collect,
+    c.cashback,
+    r.id_resident,
+    r.name_resident,
+    r.address,
+    r.phone,
+    r.cpf
+FROM
+    collect c
+INNER JOIN
+    resident r
+ON
+    c.resident_id = r.id_resident;
