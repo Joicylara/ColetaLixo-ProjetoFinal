@@ -1,6 +1,7 @@
 CREATE DATABASE selective_collect;
 USE selective_collect;
 
+DROP DATABASE selective_collect;
 
 -- Entidades
 CREATE TABLE resident (
@@ -72,8 +73,12 @@ VALUES
 ('2023-09-21', '11:35:06', " Rua Jardim das Oliveiras, São Pedro, Bahia", "não verificado",2,2, 0.00),
 ('2023-10-13', '07:40:41', " Rua Goias, Avenida Lucas, Minas Gerais", "verificado",3,3, 0.04),
 ('2023-11-23', '18:09:45', " Rua Terra Nova, Parque São Rafael, Mato Grosso", " não verificado",4,4, 0.00),
-('2024-01-05', '05:33:54', " Rua Belém , Avenida Cantareira, Santa Catarina", "coleta incorreta ",5,5, 0.00);
-
+('2024-01-05', '05:33:54', " Rua Belém , Avenida Cantareira, Santa Catarina", "coleta incorreta ",5,5, 0.00),
+('2022-05-11', '05:00:00', " Rua Dona Florinda, Kiko, São Paulo", "verificado",1,5, 0.07),
+('2023-09-21', '11:35:06', " AV. Das Torres, Imperial, Mato grosso", "coleta incorreta",3,2, 0.00),
+('2023-10-13', '07:40:41', " Av Queijo Minas, Pão de queijo Minas Gerais", "verificado",4,1, 0.08),
+('2023-11-23', '18:09:45', " Rua Fernando Corrêa,Tijucal, Mato Grosso", " não verificado",2,4, 0.00),
+('2024-01-05', '05:33:54', " Rua Paulo Freire , bairro educação, Santa Catarina", "verificado ",5,3, 0.1);
 select * from collect;
 
 
@@ -90,7 +95,12 @@ VALUES
 ("eletrônico", "perigoso", " não verificado"),
 ("folha", "compostável", "verificado"),
 ("vidro", "reciclável", " não verificado"),
-("madeira", "reciclável", "categoria inválida");
+("madeira", "reciclável", "categoria inválida"),
+("pneus", "reciclável", "verificado"),
+("pilhas", "perigoso", "verificado"),
+("papel higiênico", "reciclável", "categoria inválida"),
+("latas de alumínio", "reciclável", "verificado"),
+("garrafa pet", "reciclável", "não verificado");
 
 
 
@@ -136,6 +146,29 @@ CREATE TABLE collect_residue(
     foreign key (residue_id) references residue (id_residue) on update cascade on delete cascade
 );
 
+INSERT INTO collect_residue (collect_id, residue_id)
+VALUES 
+(1,2),
+(2,3),
+(1,7),
+(3,8),
+(4,4),
+(1,1),
+(3,5),
+(4,6),
+(5,9),
+(2,10),
+(5,1),
+(1,1),
+(2,1),
+(4,4),
+(3,4),
+(4,10),
+(5,3),
+(4,4);
+
+SELECT * FROM collect_residue;
+
 CREATE TABLE driver_vehicle(
 	id_driver_vehicle integer auto_increment  primary key,
     driver_id integer,
@@ -150,6 +183,7 @@ SELECT * FROM resident;
 SELECT * FROM route;
 SELECT * FROM collect;
 
+-- 1. Total de cashback por moradores
 SELECT 
     resident.name_resident AS 'Morador(a)',
     SUM(collect.cashback) AS 'Total de Cashback(Porcentagem)'
@@ -160,9 +194,8 @@ JOIN
 GROUP BY 
     resident.name_resident
 ORDER BY 
-    SUM(collect.cashback) 
-DESC;
-
+     resident.name_resident ASC;
+-- 2. 
 SELECT
     c.id_collect,
     c.date_collect,
@@ -181,3 +214,34 @@ INNER JOIN
     resident r
 ON
     c.resident_id = r.id_resident;
+    
+  
+-- 3. Quantidade coleta por categoria
+SELECT 
+    residue.category AS 'Categoria de Resíduo',
+    COUNT(cr.id_collect_residue) AS 'Quantidade Coletada'
+FROM 
+    residue
+JOIN 
+    collect_residue cr ON residue.id_residue = cr.residue_id
+
+GROUP BY 
+    residue.category
+ORDER BY 
+    residue.category ASC;
+    
+
+-- 4. Quantidade de coleta por tipo de resíduo
+SELECT 
+    residue.type_residue AS 'Tipo de Resíduo',
+    COUNT(cr.id_collect_residue) AS 'Quantidade Coletada'
+FROM 
+    residue
+JOIN 
+    collect_residue cr ON residue.id_residue = cr.residue_id
+GROUP BY 
+    residue.type_residue
+ORDER BY 
+    residue.type_residue ASC;
+    
+    
