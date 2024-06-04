@@ -113,6 +113,14 @@ CREATE TABLE driver (
     age integer,
     created_at timestamp default (now())
 );
+INSERT INTO driver (name_driver, phone, cpf, cnh, age)
+VALUES 
+("Juan dos Santos", "84964516451", "51849645164", "849645164", 24),
+("José Severino Lima", "81945452424", "24819454524", "819454524", 48),
+("Rodrigo Santos Pereira", "11985238523", "23119852385", "119852385", 49),
+("Yago Barbosa de Lima", "45984768476", "76459847684", "459847684", 34),
+("Ireneu Souza dos Santos", "83945214521", "21839452145", "839452145", 44);
+
 
 CREATE TABLE denounce (
 	id_denounce integer auto_increment  primary key,
@@ -125,7 +133,13 @@ CREATE TABLE denounce (
     foreign key (collect_id) references collect (id_collect) on update cascade on delete cascade,
     created_at timestamp default (now())
 );
-
+INSERT INTO denounce (name_denounce, description_denounce, status_denounce, resident_id, collect_id)
+VALUES 
+("Impossibilitação da Via", "Há diversos entulhos espalhados na via, impossibilitando a passagem das pessoas.","Resolvida", 1, 1),
+("Pedaços de Vidro na Ciclofaxa", "Diversos cacos de vidro de garrafa de bebida estão espalhados. Alguns ciclistas tiveram os pneus de suas bicicletas furados", "Pendente", 2, 2),
+("Amontoado de Plástico", "Há bastantes descartaveis aglomerados na entrada da rua", "Resolvida", 3, 3),
+("Descarte Irregular na via", "Há diversos entulhos como madeira, aluminios jogados no meio da passagem dos carros", "Pendente", 4, 4),
+("Descarte Irregular em Terreno Baldio", "Este terreno de frente a minha casa, muitas pessoas jogam seus lixos aqui e isso tem dado muito problema", "Pendente", 5, 5);
 
 -- Tabelas intermediárias
 
@@ -137,6 +151,13 @@ CREATE TABLE resident_route(
 	foreign key (route_id) references route (id_route) on update cascade on delete cascade
 
 );
+INSERT INTO resident_route (resident_id, route_id) 
+VALUES 
+(1,1),
+(2,2),
+(3,3),
+(4,4),
+(5,5);
 
 CREATE TABLE collect_residue(
 	id_collect_residue integer auto_increment  primary key,
@@ -167,8 +188,6 @@ VALUES
 (5,3),
 (4,4);
 
-SELECT * FROM collect_residue;
-
 CREATE TABLE driver_vehicle(
 	id_driver_vehicle integer auto_increment  primary key,
     driver_id integer,
@@ -176,12 +195,24 @@ CREATE TABLE driver_vehicle(
     foreign key (driver_id) references  driver (id_driver) on update cascade on delete cascade,
     foreign key (vehicle_id) references vehicle (id_vehicle) on update cascade on delete cascade
 );
+INSERT INTO driver_vehicle (driver_id, vehicle_id)
+VALUES
+(1,2),
+(3,4),
+(5,3),
+(4,5),
+(2,1);
 
 SELECT * FROM vehicle;
 SELECT * FROM residue;
 SELECT * FROM resident;
 SELECT * FROM route;
 SELECT * FROM collect;
+SELECT * FROM driver;
+SELECT * FROM denounce;
+SELECT * FROM resident_route;
+SELECT * FROM collect_residue;
+SELECT * FROM driver_vehicle;
 
 -- 1. Total de cashback por moradores
 SELECT 
