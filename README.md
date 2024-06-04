@@ -50,6 +50,7 @@ Chegamos na parte de desenvolvimento do nosso projeto de Coleta de Lixo, para de
   * Pode observar alguns valores como "plate", que seria a placa do veiculo, da tabela veiculo, e "name_route", que seria o nome da rota. Resumindo, são as caracteristicas das nossas entidades(tabelas). 
 
 ## Análise
+Teste
 
 ## Conclusão
 Para concluir, o desenvolvimento deste sistema de gerenciamento para coleta seletiva representa um passo importante na direção da sustentabilidade ambiental e da gestão eficiente de resíduos. Através da priorização da coleta seletiva e do uso de tecnologia para otimizar processos, podemos enfrentar os desafios relacionados à falta de práticas sustentáveis de gerenciamento de resíduos.
