@@ -35,6 +35,7 @@ Diante desse desafio, foi desenvolvido o sistema de gerenciamento para coleta se
 - Engajar cidadãos através de um acesso transparente e interativo a informações sobre coleta e reciclagem.
 
 ## Diagramação conceitual
+Um diagrama conceitual é uma espécie de mapa que mostra como as diferentes partes de um banco de dados se relacionam entre si. Ele ajuda a entender, de maneira visual e simplificada, como os dados estarão organizados.
 
 ## Diagramação de entidade e relacionamento
 
