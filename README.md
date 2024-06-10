@@ -40,15 +40,30 @@ Um diagrama conceitual é uma espécie de mapa que mostra como as diferentes par
 ## Diagramação de entidade e relacionamento
 
 ## Desenvolvimento
-  ### Acompanhe o processo de criação de uma banco de dados em MySQL:
-Chegamos na parte de desenvolvimento do nosso projeto de Coleta de Lixo, para desenvolver esse projeto foi utilizado o MySQL, que em breve resumo, nada mais é do que um banco de dados relacional, isso significa que ele armazena e organiza as informações em tabelas.
-  * ### create database collect_residue;
-  - Primeiro o "create database" e em seguida passamos o nome que desejamos a tabela, no caso, "collect_residue", e pronto, você já tem um banco de dados criado com MySQL. Aagora precisamos criar as tabelas e inserir informações no banco.
-  ### Agora vamos para nosso próximo passo, criar as tabelas:
+  <h3>Acompanhe o processo de criação de uma banco de dados em MySQL:</h3>
+Chegamos na parte de desenvolvimento do nosso projeto de Coleta de Lixo, para desenvolver esse projeto foi utilizado o MySQL, que em breve resumo, nada mais é do que um sistema de gerenciamento de banco de dados relacional, isso significa que ele armazena e organiza as informações em tabelas.
+
+ ### create database collect_residue;
+ 
+  - Primeiro o "create database" e em seguida passamos o nome que desejamos colocar na tabela, no caso, "collect_residue", e pronto, você já tem um banco de dados criado com MySQL. Agora precisamos criar as tabelas e inserir informações no banco.
+  ### próximo passo, criar as tabelas:
   - ### create table;
-  * Aqui vamos crair a tabela com o "create table" e em seguida, o nome da tabela. Devemos agora atribuir alguns valores a essa tabela, como seu id primeiramente, depois as informações que ele deve ter, como estamos criando um banco de dados para coleta de lixo, acompanhe alguns dos dados que inserimos nas tabelas "vehicle" e "route" que é mostrado na imagem abaixo:
-   ![Captura de tela 2024-06-01 130432](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/assets/108181021/50828efa-07b2-47e7-8303-42d9596fdccb)
-  * Pode observar alguns valores como "plate", que seria a placa do veiculo, da tabela veiculo, e "name_route", que seria o nome da rota. Resumindo, são as caracteristicas das nossas entidades(tabelas). 
+  * Aqui vamos criar a tabela com o "create table", seu nome é auto explicativo, ele é usado para criação de uma tabela, em seguida o nome da tabela. Devemos agora atribuir alguns valores a essa tabela, como seu id primeiramente, depois as informações que ele deve ter, como estamos criando um banco de dados para coleta de lixo, acompanhe alguns dos dados que inserimos nas tabelas "resident" e "driver" que é mostrado na imagem abaixo:
+   
+   ![code](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/assets/108181021/c970ccaf-6840-4e40-8f30-da7171808443)
+
+  <p>Pode observar alguns valores como "name_resident", que seria o nome do residente, e o da tabela driver como "cnh", que seria a cnh do motorista. Resumindo, são as caracteristicas das nossas entidades.</p>
+
+<h3>Inserir dados</h3>
+  <p> Após criar as tabelas, precisamos inserir os dados. Utilizamos o comando INSERT INTO para adicionar valores ao banco de dados. Vamos a um exemplo prático:</p>
+  
+  ![code1](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/assets/108181021/b1b5af20-0c5d-4fca-9a37-585d801b76b5)
+
+  <p>Com esses comandos MySQL, acabamos de inserir uma residente chamada "Ana Maria da Silva" que mora no "Bairro Santa Laura, rua Antonio".</p>
+  
+<h3>Relatórios no MySQL</h3>
+Além de armazenar dados, um banco de dados como o MySQL permite a criação de relatórios e análises que podem ser muito úteis para a gestão de resíduos. Por exemplo, podemos gerar relatórios que mostram quais áreas produzem mais lixo, quais motoristas têm maior eficiência em suas rotas, e assim por diante. Essas informações são valiosas para melhorar a eficiência do sistema de coleta de lixo e contribuir para a sustentabilidade ambiental.
+
 
 ## Análise
 Teste
