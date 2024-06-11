@@ -93,9 +93,6 @@ Embrulhe vidros quebrados e outros materiais cortantes em papel grosso (do tipo 
   [dicas:](https://www.gov.br/mma/pt-br/noticias/como-e-porque-separar-o-lixo#:~:text=Como%20separar%20o%20lixo%20dom%C3%A9stico,frascos%20de%20vidro%20e%20pl%C3%A1stico)</h5>
  
 ![Total-Cashback](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/assets/108181021/4c7463ae-b6e1-47c4-b3fc-178435bfdad3) 
-
-crédito pelas dicas: https://www.gov.br/mma/pt-br/noticias/como-e-porque-separar-o-lixo#:~:text=Como%20separar%20o%20lixo%20dom%C3%A9stico,frascos%20de%20vidro%20e%20pl%C3%A1stico.</p>
- 
  
 
 ## Análise
