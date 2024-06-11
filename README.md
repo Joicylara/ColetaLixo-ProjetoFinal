@@ -75,7 +75,7 @@ Além de armazenar dados, um banco de dados como o MySQL permite a criação de 
 ## Análise
 O Google Planilhas é uma aplicação web gratuita oferecida pelo Google, que faz parte do pacote de produtividade Google Workspace. Funciona de forma semelhante a outras ferramentas de planilhas eletrônicas, como o Microsoft Excel, permitindo a criação, edição e compartilhamento de planilhas diretamente no navegador da web. Entre suas funcionalidades estão a colaboração em tempo real, armazenamento na nuvem, gráficos e visualizações de dados, entre outras. É amplamente utilizado por indivíduos e empresas para diversas tarefas de gestão e análise de dados.
 
-A partir dos selects, isto é, das consultas realizadas no banco de dados, foi possível obter informações relevantes sobre o database "select_collect" do projeto Coleta de Lixo. Foram criados seis gráficos que exemplificam as informações descritas no Diagrama Conceitual (Br Modelo), no Diagrama de Entidade e Relacionamento (DER) e no MySQL Workbench.
+A partir dos selects, isto é, das consultas realizadas no banco de dados, foi possível obter informações relevantes sobre o database "select_collect" do projeto Coleta de Lixo. Com esses dados foram criados seis gráficos no Google Sheets que exemplificam as informações descritas no Diagrama Conceitual (Br Modelo), no Diagrama de Entidade e Relacionamento (DER) e no MySQL Workbench.
 
 Vejamos um exemplo:
 
