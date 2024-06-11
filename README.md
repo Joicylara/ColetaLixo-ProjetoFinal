@@ -36,6 +36,12 @@ Diante desse desafio, foi desenvolvido o sistema de gerenciamento para coleta se
 
 ## Diagramação conceitual
 Um diagrama conceitual é uma espécie de mapa que mostra como as diferentes partes de um banco de dados se relacionam entre si. Ele ajuda a entender, de maneira visual e simplificada, como os dados estarão organizados.
+O que é BRModelo?
+BRModelo é uma ferramenta de software que ajuda a criar e visualizar diagramas de banco de dados. Pense nela como um programa de desenho, mas em vez de desenhar casas ou árvores, você desenha a estrutura de um banco de dados.
+Em resumo:
+BRModelo é a ferramenta que você usa para desenhar.
+Diagrama Conceitual é o desenho que mostra como tudo está conectado no seu banco de dados.
+Ambos são usados para planejar e visualizar a estrutura do banco de dados antes de você realmente criar e armazenar os dados nele. Isso ajuda a garantir que o banco de dados será eficiente e fácil de usar.
 
 ## Diagramação de entidade e relacionamento
 
