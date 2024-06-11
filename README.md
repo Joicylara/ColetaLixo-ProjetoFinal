@@ -45,6 +45,7 @@ Ambos são usados para planejar e visualizar a estrutura do banco de dados antes
 
 ## Diagramação de entidade e relacionamento
 
+
 ## Desenvolvimento
   <h3>Acompanhe o processo de criação de uma banco de dados em MySQL:</h3>
 Chegamos na parte de desenvolvimento do nosso projeto de Coleta de Lixo, para desenvolver esse projeto foi utilizado o MySQL, que em breve resumo, nada mais é do que um sistema de gerenciamento de banco de dados relacional, isso significa que ele armazena e organiza as informações em tabelas.
@@ -72,7 +73,16 @@ Além de armazenar dados, um banco de dados como o MySQL permite a criação de 
 
 
 ## Análise
-Teste
+O Google Planilhas é uma aplicação web gratuita oferecida pelo Google, que faz parte do pacote de produtividade Google Workspace. Funciona de forma semelhante a outras ferramentas de planilhas eletrônicas, como o Microsoft Excel, permitindo a criação, edição e compartilhamento de planilhas diretamente no navegador da web. Entre suas funcionalidades estão a colaboração em tempo real, armazenamento na nuvem, gráficos e visualizações de dados, entre outras. É amplamente utilizado por indivíduos e empresas para diversas tarefas de gestão e análise de dados.
+
+A partir dos selects, isto é, das consultas realizadas no banco de dados, foi possível obter informações relevantes sobre o database "select_collect" do projeto Coleta de Lixo. Foram criados seis gráficos que exemplificam as informações descritas no Diagrama Conceitual (Br Modelo), no Diagrama de Entidade e Relacionamento (DER) e no MySQL Workbench.
+
+Vejamos um exemplo:
+
+Na tabela "cashback-gráfico", é possível entender que se trata do total de cashback por residentes ou moradores, criado a partir dos inserts da tabela "collect". O gráfico mostra o total percentual de cashback ganho por cada morador, conforme a quantidade de coletas e verificações realizadas, resultando nos valores apresentados. Por exemplo, o caso da moradora Ana Maria da Silva, que possui 11% de cashback. Foram realizadas três coletas em sua moradia, todas com o status "verificado" e com valores de 0,02, 0,02 e 0,00, resultando em um percentual total de 11% (0,11).
+
+É possível analisar mais gráficos no docs: https://docs.google.com/spreadsheets/d/1nZd88RqXH0Y6KsNhMfrChnrF3YlZrCFuZhgkD86GSec/edit?usp=sharing no Google Planilhas.
+
 
 ## Conclusão
 Para concluir, o desenvolvimento deste sistema de gerenciamento para coleta seletiva representa um passo importante na direção da sustentabilidade ambiental e da gestão eficiente de resíduos. Através da priorização da coleta seletiva e do uso de tecnologia para otimizar processos, podemos enfrentar os desafios relacionados à falta de práticas sustentáveis de gerenciamento de resíduos.
