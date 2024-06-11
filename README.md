@@ -46,9 +46,10 @@ Ambos são usados para planejar e visualizar a estrutura do banco de dados antes
 ## Diagramação de entidade e relacionamento
 É uma versão mais detalhada de um diagrama conceitual, podemos considerar como estágio intermediário na criação de um banco de dados. Além de tabelas, relacionamentos e atributos também serem apresentados nesse tipo de diagrama, sua especialidade está no detalhamento de como as relações e os dados serão introduzidos e definidos, como por exemplo o tipo de dado que um atributo pode receber.
 
-EX: Route é uma tabela neste diagrama abaixo, nela possui um atributo chamado name_route, onde ao seu lado está escrito varchar(100)NN, onde especifica que tipo de dado pode entrar neste atributo.
-
 ![Sellect_collect_dbdiagram (1)](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/assets/140112089/9d173bc3-02d3-421c-a991-0be4b63c4343)
+
+EX: Route é uma tabela neste diagrama acima, nela possui um atributo chamado name_route, onde ao seu lado está escrito varchar(100)NN, especificando que tipo de dado pode entrar neste atributo, sendo varchar um tipo de dado, 100 representando a quantidade de caracteres e NN - não nulo.
+
 
 
 ## Desenvolvimento
