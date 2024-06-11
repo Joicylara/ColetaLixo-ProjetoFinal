@@ -67,10 +67,28 @@ Chegamos na parte de desenvolvimento do nosso projeto de Coleta de Lixo, para de
   ![code1](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/assets/108181021/b1b5af20-0c5d-4fca-9a37-585d801b76b5)
 
   <p>Com esses comandos MySQL, acabamos de inserir uma residente chamada "Ana Maria da Silva" que mora no "Bairro Santa Laura, rua Antonio".</p>
-  
-<h3>Relatórios no MySQL</h3>
-Além de armazenar dados, um banco de dados como o MySQL permite a criação de relatórios e análises que podem ser muito úteis para a gestão de resíduos. Por exemplo, podemos gerar relatórios que mostram quais áreas produzem mais lixo, quais motoristas têm maior eficiência em suas rotas, e assim por diante. Essas informações são valiosas para melhorar a eficiência do sistema de coleta de lixo e contribuir para a sustentabilidade ambiental.
 
+  <h3>Sistema de Cashback  por coleta</h3>
+
+ ![code3](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/assets/108181021/2881ad6e-eae2-4ce2-b195-48dc2447cba4)
+
+  <p>Agora vamos explicar um pouco sobre o sistema de cashback por coleta, como o desenvolvemos e seu propósito. A coleta por cashback foi pensando como forma de incentivar a correta separação de resíduos na hora do descarte, o sistema tem como foco gerar menos poluição ambiental e aumentar a quantidade de reutizilações, e já que você(usuário) está participando dessa contribuição pro mundo, por que não ganhar algo em troca? O sistema funciona assim: Quando o cliente descarta um resíduo corretamente, seguindo os padrões descritos nas lixeiras, temos algumas dicas de como você pode separar dentro da sua casa 
+
+"Não misture recicláveis com orgânicos - sobras de alimentos, cascas de frutas e legumes. Coloque plásticos, vidros, metais e papéis em sacos separados.
+
+Lave as embalagens do tipo longa vida, latas, garrafas e frascos de vidro e plástico. Seque-os antes de depositar nos coletores.
+
+Papéis devem estar secos. Podem ser dobrados, mas não amassados.
+
+Embrulhe vidros quebrados e outros materiais cortantes em papel grosso (do tipo jornal) ou colocados em uma caixa para evitar acidentes. Garrafas e frascos não devem ser misturados com os vidros planos."
+
+<h5>Esses são os dados dos moradores que que geramos anteriormente, e seus resultados pela correta separação dos resíduos, seguindo esssas dicas</h5>
+
+![Total-Cashback](https://github.com/Joicylara/ColetaLixo-ProjetoFinal/assets/108181021/4c7463ae-b6e1-47c4-b3fc-178435bfdad3) 
+
+crédito pelas dicas: https://www.gov.br/mma/pt-br/noticias/como-e-porque-separar-o-lixo#:~:text=Como%20separar%20o%20lixo%20dom%C3%A9stico,frascos%20de%20vidro%20e%20pl%C3%A1stico.</p>
+ 
+ 
 
 ## Análise
 O Google Planilhas é uma aplicação web gratuita oferecida pelo Google, que faz parte do pacote de produtividade Google Workspace. Funciona de forma semelhante a outras ferramentas de planilhas eletrônicas, como o Microsoft Excel, permitindo a criação, edição e compartilhamento de planilhas diretamente no navegador da web. Entre suas funcionalidades estão a colaboração em tempo real, armazenamento na nuvem, gráficos e visualizações de dados, entre outras. É amplamente utilizado por indivíduos e empresas para diversas tarefas de gestão e análise de dados.
