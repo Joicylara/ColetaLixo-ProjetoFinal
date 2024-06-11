@@ -1,8 +1,6 @@
 CREATE DATABASE select_collect;
 USE select_collect;
 
-DROP DATABASE select_collect;
-
 -- 1. passo(depois de já ter criado o banco de dados e executado o 'use')
 CREATE TABLE resident (
 	id_resident  integer auto_increment primary key,
@@ -36,7 +34,6 @@ CREATE TABLE collect (
 	route_id integer,
     cashback decimal (10, 3),
     foreign key (resident_id) references resident (id_resident) on update cascade on delete cascade
-    -- foreign key (route_id) references route (id_route) on update cascade on delete cascade
 );
 
 -- 4.passo
@@ -48,7 +45,6 @@ CREATE TABLE route (
     status bool,
     date date not null,
 	vehicle_id integer,
-    -- foreign key (vehicle_id) references vehicle (id_vehicle) on update cascade on delete cascade
     collect_id integer,
     foreign key (collect_id) references collect (id_collect) on update cascade on delete cascade
 );
