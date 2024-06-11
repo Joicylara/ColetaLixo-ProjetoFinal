@@ -81,7 +81,7 @@ Vejamos um exemplo:
 
 Na tabela "cashback-gráfico", é possível entender que se trata do total de cashback por residentes ou moradores, criado a partir dos inserts da tabela "collect". O gráfico mostra o total percentual de cashback ganho por cada morador, conforme a quantidade de coletas e verificações realizadas, resultando nos valores apresentados. Por exemplo, o caso da moradora Ana Maria da Silva, que possui 11% de cashback. Foram realizadas três coletas em sua moradia, todas com o status "verificado" e com valores de 0,02, 0,02 e 0,00, resultando em um percentual total de 11% (0,11).
 
-É possível analisar mais gráficos no docs: https://docs.google.com/spreadsheets/d/1nZd88RqXH0Y6KsNhMfrChnrF3YlZrCFuZhgkD86GSec/edit?usp=sharing no Google Planilhas.
+É possível analisar mais gráficos no docs: [Coleta de Lixo](https://docs.google.com/spreadsheets/d/1nZd88RqXH0Y6KsNhMfrChnrF3YlZrCFuZhgkD86GSec/edit?usp=sharing) no Google Planilhas.
 
 
 ## Conclusão
