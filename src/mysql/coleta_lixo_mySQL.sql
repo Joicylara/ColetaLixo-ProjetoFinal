@@ -1,7 +1,6 @@
 CREATE DATABASE select_collect;
 USE select_collect;
 
-
 -- 1. passo(depois de já ter criado o banco de dados e executado o 'use')
 CREATE TABLE resident (
 	id_resident  integer auto_increment primary key,
@@ -134,19 +133,19 @@ VALUES
 ('2023-05-11', '10:33:59', " Rua Jardim das Goiabeiras, Parque São Lucas, São Paulo", "verificado",1,1, 0.02),
 ('2023-09-21', '11:35:06', " Rua Jardim das Oliveiras, São Pedro, Bahia", "não verificado",2,2, 0.00),
 ('2023-10-13', '07:40:41', " Rua Goias, Avenida Lucas, Minas Gerais", "verificado",3,3, 0.04),
-('2023-11-23', '18:09:45', " Rua Terra Nova, Parque São Rafael, Mato Grosso", " não verificado",4,4, 0.00),
-('2024-01-05', '05:33:54', " Rua Belém , Avenida Cantareira, Santa Catarina", "coleta incorreta ",5,5, 0.00),
+('2023-11-23', '18:09:45', " Rua Terra Nova, Parque São Rafael, Mato Grosso", "não verificado",4,4, 0.00),
+('2024-01-05', '05:33:54', " Rua Belém , Avenida Cantareira, Santa Catarina", "coleta incorreta",5,5, 0.00),
 ('2022-05-11', '05:00:00', " Rua Dona Florinda, Kiko, São Paulo", "verificado",1,5, 0.07),
 ('2023-09-21', '11:35:06', " AV. Das Torres, Imperial, Mato grosso", "coleta incorreta",3,4, 0.00),
 ('2023-10-13', '07:40:41', " Av Queijo Minas, Pão de queijo Minas Gerais", "verificado",4,3, 0.08),
-('2023-11-23', '18:09:45', " Rua Fernando Corrêa,Tijucal, Mato Grosso", " não verificado",2,1, 0.00),
-('2024-01-05', '05:33:54', " Rua Paulo Freire , bairro educação, Santa Catarina", "verificado ",5,2, 0.1),
-('2024-01-05', '05:33:54', " Rua Abacaxi , Avenida Cantareira, Santa Catarina", "coleta incorreta ",5,5, 0.00),
+('2023-11-23', '18:09:45', " Rua Fernando Corrêa,Tijucal, Mato Grosso", "não verificado",2,1, 0.00),
+('2024-01-05', '05:33:54', " Rua Paulo Freire , bairro educação, Santa Catarina", "verificado",5,2, 0.1),
+('2024-01-05', '05:33:54', " Rua Abacaxi , Avenida Cantareira, Santa Catarina", "coleta incorreta",5,5, 0.00),
 ('2022-05-11', '05:00:00', " Rua Chaves, Vila do 71, Santa Catrina", "coleta incorreta",1,5, 0.00),
 ('2023-09-21', '11:35:06', "Av. Recanto dos Passáros, Amazonas", "coleta incorreta",3,4, 0.00),
 ('2023-10-13', '07:40:41', " Av. Belos olhos, Colirío, Acre", "coleta incorreta",4,3, 0.00),
-('2023-11-23', '18:09:45', " Rua Branca de neve, Encantado", " coleta incorreta",2,1, 0.00),
-('2024-01-05', '05:33:54', " Av. Belos Ares, Ares, Pernambuco", "verificado ",5,2, 0.1);
+('2023-11-23', '18:09:45', " Rua Branca de neve, Encantado", "coleta incorreta",2,1, 0.00),
+('2024-01-05', '05:33:54', " Av. Belos Ares, Ares, Pernambuco", "verificado",5,2, 0.1);
 
 
 -- 15.passo
@@ -171,9 +170,9 @@ UPDATE vehicle SET  route_id = (SELECT  id_route FROM route WHERE id_route = 5) 
 INSERT INTO residue (type_residue, category, checks_discard, collect_id)
 VALUES 
 ("papel e papelão", "reciclável", "verificado",1),
-("eletrônico", "perigoso", " não verificado",12),
+("eletrônico", "perigoso", "não verificado",12),
 ("folha", "compostável", "verificado",11),
-("vidro", "reciclável", " não verificado",14),
+("vidro", "reciclável", "não verificado",14),
 ("madeira", "reciclável", "categoria inválida",12),
 ("pneus", "reciclável", "verificado",8),
 ("pilhas", "perigoso", "verificado",8),
@@ -191,7 +190,7 @@ VALUES
 ("garrafa pet", "reciclável", "não verificado",11),
 ("latas de alumínio", "reciclável", "verificado",12),
 ("garrafa pet", "reciclável", "não verificado",11),
-("vidro", "reciclável", " não verificado",14),
+("vidro", "reciclável", "não verificado",14),
 ("madeira", "reciclável", "categoria inválida",12),
 ("garrafa pet", "reciclável", "não verificado",11),
 ("pilhas", "perigoso", "verificado",8),
@@ -199,7 +198,7 @@ VALUES
 ("garrafa pet", "reciclável", "não verificado",11),
 ("latas de alumínio", "reciclável", "verificado",12),
 ("resto de comida", "compostavel", "verificado",11),
-("bateria de celular", "perigoso", " não verificado",14),
+("bateria de celular", "perigoso", "não verificado",14),
 ("resto de comida", "compostável", "verificado",12),
 ("garrafa pet", "reciclável", "não verificado",11),
 ("tv", "perigoso", "verificado",8),
@@ -318,3 +317,139 @@ GROUP BY
 ORDER BY
 	resident.name_resident ASC;
     
+   
+-- 7. Quantidade de resíduo por morador
+SELECT resident.name_resident AS "Morador",
+	COUNT(residue.id_residue) AS "Quantidade de resíduo por morador"
+FROM
+	resident
+LEFT JOIN 
+	collect ON resident.id_resident = collect.resident_id
+LEFT JOIN 
+	residue ON collect.id_collect = residue.collect_id
+GROUP BY
+	resident.name_resident
+ORDER BY
+	resident.name_resident ASC;
+
+ 
+-- 8. Quantidade de horario por motorista
+-- TIMESTAMPDIFF calcula a diferença das horas
+SELECT 
+    driver.name_driver AS "Motorista",
+     SUM(TIMESTAMPDIFF(HOUR, route.start_time, route.end_time)) AS "Horas trabalhadas"
+FROM 
+    driver
+LEFT JOIN 
+    vehicle ON driver.id_driver = vehicle.driver_id
+LEFT JOIN
+	route ON vehicle.id_vehicle = route.vehicle_id
+GROUP BY 
+    driver.name_driver
+ORDER BY 
+   driver.name_driver ASC;
+   
+-- 9. Total de coleta por rota
+SELECT 
+    route.name_route AS "Rota",
+    COUNT(collect.id_collect) AS "Total de coletas"
+FROM 
+    route
+LEFT JOIN 
+    collect ON route.id_route = collect.route_id
+GROUP BY 
+    route.name_route;
+
+-- 10. Total das denúncias por status
+SELECT 
+    denounce.status_denounce AS "Status",
+    COUNT(denounce.id_denounce) AS "Total de denúncias"
+FROM 
+    denounce
+GROUP BY 
+    denounce.status_denounce;
+    
+-- 11. Total da coleta por dia na semana
+SELECT 
+    DAYNAME(collect.date_collect) AS Dia_Semana,
+    COUNT(collect.id_collect) AS Total_Coletas
+FROM 
+    collect
+GROUP BY 
+    Dia_Semana
+ORDER BY 
+    FIELD(Dia_Semana, 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+
+-- 12. Total de resíduo e seus status
+SELECT 
+    residue.checks_discard AS "Status de descarte",
+    COUNT(residue.id_residue) AS "Total de residuos"
+FROM 
+    residue
+GROUP BY 
+    residue.checks_discard;
+
+-- 13. total de coleta e seus status coleta
+SELECT 
+    collect.check_collect AS "Status de coleta",
+    COUNT(collect.id_collect) AS "Total de coleta"
+FROM 
+    collect
+GROUP BY 
+    collect.check_collect;
+    
+-- 14. Porcentual de cada status do descarte de residuo
+SELECT 
+    checks_discard AS "Status de descarte",
+    ROUND(COUNT(id_residue) / (SELECT COUNT(*) FROM residue) * 100.00, 2) AS Percentual
+FROM 
+    residue
+GROUP BY 
+    checks_discard;
+    
+-- 15. Porcentual de residuos recicláveis e não recicláveis
+SELECT 
+    CASE 
+        WHEN category = 'reciclavel' THEN 'Reciclável'
+        ELSE 'Nao Reciclavel'
+    END AS Tipo_Residuo,
+    COUNT(id_residue) AS Total_Residuos,
+    ROUND(COUNT(id_residue) / (SELECT COUNT(*) FROM residue) * 100.00, 2) AS "Percentual"
+FROM 
+    residue
+GROUP BY 
+    Tipo_Residuo;
+
+-- 16. Total de denuncia por tipo de residuo
+SELECT 
+    residue.type_residue AS "Tipo de residuo",
+    COUNT(denounce.id_denounce) AS "Total de denuncias"
+FROM 
+    denounce
+JOIN 
+    residue ON denounce.collect_id = residue.collect_id
+GROUP BY 
+    residue.type_residue;
+
+-- 17. Total de denuncia por tipo de denuncia
+SELECT 
+    name_denounce AS "Tipo de denuncia",
+    COUNT(id_denounce) AS "Total de denuncias"
+FROM 
+    denounce
+GROUP BY 
+    name_denounce;
+
+-- 18. Faixa etária dos motoristas
+SELECT 
+    CASE
+        WHEN age < 30 THEN 'Menos de 30 anos'
+        WHEN age >= 30 AND age < 40 THEN '30-39 anos'
+        WHEN age >= 40 AND age < 50 THEN '40-49 anos'
+        ELSE '50 anos ou mais'
+    END AS Faixa_Etaria,
+    COUNT(id_driver) AS "Total de motoristas"
+FROM 
+    driver
+GROUP BY 
+    Faixa_Etaria;
